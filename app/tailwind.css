@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+/* ------------------------------------------
+   CUSTOM THEME TOKENS (Tailwind v4 style)
+------------------------------------------- */
+@theme {
+
+  
+
+  --font-Outfit: "Outfit", sans-serif;
+  --font-Ovo: "Ovo", serif;
+
+  --grid-template-columns-auto: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* ------------------------------------------
+   LIGHT & DARK THEME VARIABLES
+------------------------------------------- */
+@layer base {
+  /* Default: Light mode */
+  :root {
+    --bg-theme: #ffffff;
+    --text-theme: #000000;
+
+    --hover-theme: #fcf4ff;
+    --hover-theme-dark: #2a004a;
+
+    --shadow-theme: 4px 4px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  /* Dark mode (activated when <html> has .night) */
+  html.night {
+    --bg-theme: #11001f;
+    --text-theme: #ffffff;
+
+    --hover-theme: #2a004a;
+    --hover-theme-dark: #fcf4ff; /* optional reverse */
+
+    --shadow-theme: 4px 4px 0 rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* ------------------------------------------
+   UTILITY CLASSES (replace old Tailwind dark: utilities)
+------------------------------------------- */
+@layer utilities {
+  .bg-theme {
+    background-color: var(--bg-theme);
+  }
+  .text-theme {
+    color: var(--text-theme);
+  }
+
+  .hover-theme {
+    background-color: var(--hover-theme);
+  }
+
+  .hover-theme-dark {
+    background-color: var(--hover-theme-dark);
+  }
+
+  .shadow-theme {
+    box-shadow: var(--shadow-theme);
+  }
+}
