@@ -78,24 +78,28 @@ export const assets = {
 
 export const workData = [
     {
-        title: 'Frontend project',
-        description: 'Web Design',
-        bgImage: '/work-1.png',
+        title: 'Full-Stack LMS',
+        description: 'MERN {live}',
+        bgImage: '/work-2.png',
+        link: 'https://lms-frontend-indol-theta.vercel.app/',
     },
     {
-        title: 'Full-Stack LMS',
-        description: 'MERN',
-        bgImage: '/work-2.png',
+        title: 'WeatherApp',
+        description: 'Web app using react',
+        bgImage: '/work-1.png',
+        link: 'https://github.com/psinvincible/Weather_app_react',
     },
     {
         title: 'Photography site',
         description: 'Web Design',
         bgImage: '/work-3.png',
+        link: '#',
     },
     {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
+        title: 'Blog Web App',
+        description: 'Basic Functionality',
         bgImage: '/work-4.png',
+        link: 'https://github.com/psinvincible/ps-blog'
     },
 ]
 

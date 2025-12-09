@@ -59,7 +59,8 @@ const Work = ({ isDarkMode }) => {
                 <p className="text-sm text-gray-700">{project.description}</p>
               </div>
               <div className="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
-                <Image src={assets.send_icon} alt="" className="w-5" />
+                
+                <a href={project.link} target="_blank"><Image src={assets.send_icon} alt="" className="w-5" /></a>
               </div>
             </div>
           </motion.div>
@@ -69,7 +70,7 @@ const Work = ({ isDarkMode }) => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 1.1, duration: 0.5 }}
-        href=""
+        href="https://github.com/psinvincible/" target="_blank"
         className={`w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full y-3 px-10 mx-auto my-20  ${
           isDarkMode
             ? "text-theme border-white hover:bg-[#2a004a]"
