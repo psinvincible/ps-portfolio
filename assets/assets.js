@@ -90,16 +90,16 @@ export const workData = [
         link: 'https://lms-frontend-indol-theta.vercel.app/',
     },
     {
+        title: 'Fee Management SFCS',
+        description: 'EJS project {Live}',
+        bgImage: '/work-5.png',
+        link: 'https://student-fee-collection-system.vercel.app/',
+    },
+    {
         title: 'WeatherApp',
         description: 'Web app using react',
         bgImage: '/work-2.png',
         link: 'https://github.com/psinvincible/Weather_app_react',
-    },
-    {
-        title: 'Fee Management',
-        description: 'Web Design',
-        bgImage: '/work-3.png',
-        link: 'https://github.com/psinvincible/StudentFeeCollectionSystem',
     },
     {
         title: 'Blog Web App',
