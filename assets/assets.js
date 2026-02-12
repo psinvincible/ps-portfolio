@@ -78,15 +78,21 @@ export const assets = {
 
 export const workData = [
     {
+        title: 'E-Commerce Full Stack',
+        description: 'NEXT JS {live}',
+        bgImage: '/e_commerce.png',
+        link: 'https://e-commerce-seven-delta-77.vercel.app/',
+    },
+    {
         title: 'Full-Stack LMS',
         description: 'MERN {live}',
-        bgImage: '/work-2.png',
+        bgImage: '/work-1.png',
         link: 'https://lms-frontend-indol-theta.vercel.app/',
     },
     {
         title: 'WeatherApp',
         description: 'Web app using react',
-        bgImage: '/work-1.png',
+        bgImage: '/work-2.png',
         link: 'https://github.com/psinvincible/Weather_app_react',
     },
     {

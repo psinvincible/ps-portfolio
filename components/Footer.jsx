@@ -17,7 +17,7 @@ const Footer = ({isDarkMode}) => {
             <p>&copy; 2025 Prince Prajapati. All rights reserved.</p>
             <ul className='flex items-center gap-10 justify-center mt-4 sm:mt-0'>
                 <li><a target='_blank' href="https://github.com/psinvincible">GitHub</a></li>
-                <li><a target='_blank' href="">LinkedIn</a></li>
+                <li><a target='_blank' href="https://www.linkedin.com/in/prajapatiprince3/">LinkedIn</a></li>
                 <li><a target='_blank' href="https://instagram.com/psinvincible">Instagram</a></li>
             </ul>
         </div>
