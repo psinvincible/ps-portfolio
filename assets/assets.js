@@ -96,10 +96,10 @@ export const workData = [
         link: 'https://github.com/psinvincible/Weather_app_react',
     },
     {
-        title: 'Photography site',
+        title: 'Fee Management',
         description: 'Web Design',
         bgImage: '/work-3.png',
-        link: '#',
+        link: 'https://github.com/psinvincible/StudentFeeCollectionSystem',
     },
     {
         title: 'Blog Web App',
