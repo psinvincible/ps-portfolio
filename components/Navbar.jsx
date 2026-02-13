@@ -74,6 +74,11 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
               Contact me
             </a>
           </li>
+          <li>
+            <a className={ovo.className} href="/life">
+              LifeLine
+            </a>
+          </li>
         </ul>
 
         <div className="flex items-center gap-4">
