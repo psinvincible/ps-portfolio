@@ -148,6 +148,11 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
               Contact me
             </a>
           </li>
+          <li>
+            <a className={ovo.className} href="/life" onClick={closeMenu}>
+              Lifeline
+            </a>
+          </li>
         </ul>
       </nav>
     </>
