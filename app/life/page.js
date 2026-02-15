@@ -6,13 +6,9 @@ import Link from "next/link"
 
 export default function Life(){
     return (
-        <div className="min-h-screen ">
-            <div>
-                <Link href="/" className=" m-2 p-3 rounded bg-blue-300 text-black">Home</Link>
-                {/* <Link href="/aboutme" className=" m-2 p-3 rounded bg-blue-300 text-black">Elaborated Me</Link> */}
-            </div>
+        <>
             <Intro />
             <LifeCounter />
-        </div>
+        </>
     )
 }

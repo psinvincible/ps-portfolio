@@ -128,3 +128,60 @@ export const toolsData = [
     assets.vscode,  assets.mongodb, assets.git, assets.postman,
     //assets.figma, assets.firebase,
 ];
+
+export const timelineData = [
+  {
+    year: "2026",
+    title: "Project Deployment",
+    description:
+      "Deployed full-stack applications on Vercel, implemented payment integration, and optimized performance for production.",
+  },
+  {
+    year: "2025",
+    title: "Learning & Building",
+    description:
+      "Focused on Next.js, MongoDB, and built role-based admin dashboards with authentication and fee management systems.Learning was never stopped. In 2024 second half and first half of 2025 I learned from Scratch from youtube Sigma WebDevelopment course follow up. Build many project such as url shortener(bitlinks), crowd funding platform (get-me-a-chai) and pateron project(linktree-clone). MeanWhile went Hometown for some work..., In 2nd half 2025 built Few NEXT JS project such as Learning Management System(LMS), Portfolio, and Student Fee Collection(SFCS)",
+  },
+  {
+    year: "2024",
+    title: "Graduation Completion",
+    description:
+      "Completed BCA and strengthened fundamentals of web development, databases, and real-world project architecture. For BCA 6th sem the final year Project was Online Catering Service built with  tech-stack(PHP, HTML, CSS, JS, MySQL). Project Viva was held in October 07, 2024. And result was declared in December 2024. Also in Delta 2.0 we build major project named as WanderLust it was a fullstack MERN project clone of Airbnb and listing project completed in January 2024. ",
+  },
+  {
+    year: "2023",
+    title: "BCA 4th and 5th Semester",
+    description:
+      "In 4th sem new language introduced JAVA. Other core subjects were Computer Networks, Intro. to Algorithm and WebDesign. While pusing BCA I Enrolled my self in Full-Stack web development Course [Delta 2.0] in September. Tech Stack they taught me was MERN (Mongo, Express, React, Node) along with HTML, CSS & JS.",
+  },
+  {
+    year: "2022",
+    title: "BCA 2nd and 3rd Semester",
+    description:
+      "In 2nd sem Learned Programming with C along with Assembly Language and many more. In 3rd sem Core subjects were C++, Data & file structures, DBMS and System analysis and design.",
+  },
+  {
+    year: "2021",
+    title: "Intermediate Completion",
+    description:
+      "Passed 12th in July 30, 2021. Next Opted for Distance Learning From IGNOU with Bachelor of Computer Application Stream. BCA SEM-1",
+  },
+  {
+    year: "2020",
+    title: "11th & 12th",
+    description:
+      "Hustling with Physics, Chemistry, Math and Computer Science. [Learned Python and SQL]",
+  },
+  {
+    year: "2019",
+    title: "High-School Completion",
+    description:
+      "Passed High-School with Distinction in May 06, 2019. Next opted Science stream with maths and Computer Science.",
+  },
+  {
+    year: "2002",
+    title: "Hello Universe...",
+    description:
+      "Hi Planet Earth. It's me Prince...",
+  },
+];
