@@ -7,6 +7,7 @@ import Work from "@/components/Work";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import { useEffect, useState } from "react";
+import ScrollProgress from "@/components/ScrollProgress";
 
 export default function Home() {
 
@@ -31,6 +32,7 @@ export default function Home() {
   }, [isDarkMode])
   return (
     <>
+      <ScrollProgress />
       <Navbar isDarkMode={isDarkMode}  setIsDarkMode={setIsDarkMode}/>
       <Header isDarkMode={isDarkMode} />
       <About isDarkMode={isDarkMode} />

@@ -4,69 +4,66 @@ import React from "react";
 import { motion } from "motion/react";
 import { ovo } from "@/app/layout";
 
-const Services = ({isDarkMode}) => {
+const Services = ({ isDarkMode }) => {
+  const services = [
+    {
+      icon: assets.web_icon,
+      title: "Full Stack Web Apps",
+      desc: "Building scalable web applications using MERN stack and Next.js with authentication, APIs, and database integration.",
+    },
+    {
+      icon: assets.ui_icon,
+      title: "Frontend Development",
+      desc: "Creating responsive and modern UI using React, Next.js, and Tailwind CSS with clean design and performance focus.",
+    },
+    {
+      icon: assets.mobile_icon,
+      title: "Backend Development",
+      desc: "Developing REST APIs, authentication systems, and server-side logic using Node.js, Express, and MongoDB.",
+    },
+    {
+      icon: assets.project_icon,
+      title: "Project Development",
+      desc: "Building real-world projects like dashboards, admin panels, and portfolio systems with full functionality.",
+    },
+  ];
+
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+    <section
       id="services"
-      className="w-full px-[12%] py-10 scroll-mt-20"
+      className="w-full px-6 md:px-[10%] py-20 scroll-mt-10"
     >
-      <motion.h4
-        initial={{ y: -20, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.3, duration: 0.5 }}
-        className={`${ovo.className} text-center mb-2 text-lg`}
-      >
-        What I offer
-      </motion.h4>
-      <motion.h2
-        initial={{ y: -20, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.5 }}
-        className={`${ovo.className} text-center text-5xl`}
-      >
-        My Services
-      </motion.h2>
+      {/* Heading */}
+      <div className="text-center">
+        <h2 className={`text-3xl md:text-5xl font-semibold ${ovo.className}`}>
+          What I Build
+        </h2>
+        <p className="text-gray-500 mt-2">
+          My development capabilities
+        </p>
+      </div>
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.7, duration: 0.5 }}
-        className={`${ovo.className} text-center max-w-2xl mx-auto mt-5 mb-12`}
-      >
-        I am a Full Stack WebDevloper from Delhi, India. Fresher and Open to
-        work and get experience to improve my skills and improve way of living.
-      </motion.p>
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.9, duration: 0.6 }}
-        className="grid grid-cols-auto gap-6 my-10 "
-      >
-        {serviceData.map(({ icon, title, description, link }, index) => (
+      {/* Cards */}
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
+        {services.map((service, index) => (
           <motion.div
-            whileHover={{ scale: 1.05 }}
             key={index}
-            className={`border border-gray-400 rounded-lg px-8 py-12 hover:shadow-theme cursor-pointer  hover:-translate-y-1 duration-500 ${isDarkMode? 'hover:bg-[#2a004a]':'hover:bg-[#fcf4ff]'}`}
+            whileHover={{ y: -8 }}
+            className="p-6 border-[0.5px] border-gray-400 rounded-xl hover:shadow-lg transition"
           >
-            <Image src={icon} alt="" className="w-10" />
-            <h3 className={`text-lg my-4 text-gray-700 w-1 ${isDarkMode? 'text-white' : ''}`}>
-              {title}
+            <Image src={service.icon} alt="" className="w-10 mb-4" />
+
+            <h3 className="text-lg font-semibold mb-2">
+              {service.title}
             </h3>
-            <p className={`text-sm text-gray-600 leading-5 wrap ${isDarkMode? 'text-white/80' : ''}`}>
-              {description}
+
+            <p className={`text-sm ${isDarkMode ? "text-gray-400" : "text-gray-600"} leading-relaxed"`}>
+              {service.desc}
             </p>
-            <a href={link} className="flex items-center gap-2 text-sm mt-5">
-              Read more{" "}
-              <Image src={assets.right_arrow} alt="" className="w-4" />
-            </a>
           </motion.div>
         ))}
-      </motion.div>
-    </motion.div>
+      </div>
+    </section>
   );
 };
 

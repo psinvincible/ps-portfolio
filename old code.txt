@@ -1,0 +1,509 @@
+old nav
+
+ {/* old nav */}
+      <div className={`fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] ${isDarkMode ? 'hidden' : ''}`}>
+        <Image src={assets.header_bg_color} alt="" className="w-full"></Image>
+      </div>
+      <nav
+        className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${
+          isScroll
+            ? "bg-white/95 backdrop:filter backdrop:blur-lg shadow-sm"
+            : ""
+        } ${isDarkMode ? 'bg-theme shadow-theme': ''}`}
+      >
+        <a href="#top">
+          <Image
+            src={isDarkMode ? assets.logo_dark : assets.logo}
+            className="w-28 cursor-pointer mr-14"
+            alt="logo"
+          ></Image>
+        </a>
+        <ul
+          className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${
+            isScroll
+              ? ""
+              : "shadow-sm bg-white/50 backdrop:blur-lg "
+          } ${isDarkMode ? 'border border-white/50 bg-transparent' : ''}`}
+        >
+          <li>
+            <a className={ovo.className} href="#top">
+              Home
+            </a>
+          </li>
+          <li>
+            <a className={ovo.className} href="#about">
+              About Me
+            </a>
+          </li>
+          <li>
+            <a className={ovo.className} href="#services">
+              Services
+            </a>
+          </li>
+          <li>
+            <a className={ovo.className} href="#work">
+              My Work
+            </a>
+          </li>
+          <li>
+            <a className={ovo.className} href="#contact">
+              Contact me
+            </a>
+          </li>
+          <li>
+            <a className={ovo.className} href="/life">
+              LifeLine
+            </a>
+          </li>
+        </ul>
+
+        <div className="flex items-center gap-4">
+          <button onClick={() => setIsDarkMode((prev) => !prev)}>
+            <Image
+              src={isDarkMode ? assets.sun_icon : assets.moon_icon}
+              alt=""
+              className="w-6"
+            ></Image>
+          </button>
+
+          <a
+            href="#contact"
+            className={`${ovo.className} hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 ${isDarkMode ? 'border-white/50 hover:bg-[#2a004a]' : 'hover:bg-[#fcf4ff]'}`}
+          >
+            Contact{" "}
+            <Image
+              src={isDarkMode ? assets.arrow_icon_dark : assets.arrow_icon}
+              alt="arrow-icon"
+              className="w-3"
+            ></Image>
+          </a>
+
+          <button className="block md:hidden ml-3" onClick={openMenu}>
+            <Image
+              src={isDarkMode ? assets.menu_white : assets.menu_black}
+              alt=""
+              className="w-6"
+            ></Image>
+          </button>
+        </div>
+
+        {/* ------------mobile menu ----------- */}
+        <ul
+          ref={sideMenuRef}
+          className={`flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 ${isDarkMode ? 'hover-theme text-theme' : ''} `}
+        >
+          <div className="absolute right-6 top-6" onClick={closeMenu}>
+            <Image
+              src={isDarkMode ? assets.close_white : assets.close_black}
+              alt=""
+              className="w-5 cursor-pointer"
+            ></Image>
+          </div>
+          <li>
+            <a className={ovo.className} href="#top" onClick={closeMenu}>
+              Home
+            </a>
+          </li>
+          <li>
+            <a className={ovo.className} href="#about" onClick={closeMenu}>
+              About Me
+            </a>
+          </li>
+          <li>
+            <a className={ovo.className} href="#services" onClick={closeMenu}>
+              Services
+            </a>
+          </li>
+          <li>
+            <a className={ovo.className} href="#work" onClick={closeMenu}>
+              My Work
+            </a>
+          </li>
+          <li>
+            <a className={ovo.className} href="#contact" onClick={closeMenu}>
+              Contact me
+            </a>
+          </li>
+          <li>
+            <a className={ovo.className} href="/life" onClick={closeMenu}>
+              Lifeline
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+
+//old header 
+
+
+<div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4" id="top">
+      <motion.div
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
+      >
+        <Image
+          src={assets.profile_img}
+          alt=""
+          className="rounded-full w-32  mt-6"
+        ></Image>
+      </motion.div>
+      <motion.h3
+        initial={{ y: -20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        className={`flex items-end gap-2 text-xl md:text-2xl mb-3 ${ovo.className}`}
+      >
+        Hi | I'm Prince Prajapati{" "}
+        <Image src={assets.hand_icon} alt="" className="w-6"></Image>
+      </motion.h3>
+      <motion.h1
+        initial={{ y: -30, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+        className={`text-3xl sm:text-6xl lg:text-[66px] ${ovo.className}`}
+      >
+        Full-Stack web developer based in Delhi.
+      </motion.h1>
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.7 }}
+        className={`max-w-2xl mx-auto ${ovo.className}`}
+      >
+        I am a Full-Stack Web Developer. _FRESHER_ Ready to work and adapt new
+        technologies. I have used MERN technologies to develop projects.
+      </motion.p>
+      <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
+        <motion.a
+          initial={{ y: 30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 1 }}
+          href="#contact"
+          className={`px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 ${isDarkMode ? 'bg-transparent hover:bg-[#2a004a]': ''}`}
+        >
+          contact me{" "}
+          <Image
+            src={
+              isDarkMode ? assets.right_arrow_white : assets.right_arrow_white
+            }
+            alt=""
+            className="w-4"
+          ></Image>
+        </motion.a>
+
+        <motion.a
+          initial={{ y: 30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 1.2 }}
+          href="/prince-resume.pdf"
+          className={`px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white ${isDarkMode? 'text-black':''}`}
+        >
+          my resume{" "}
+          <Image src={assets.download_icon} alt="" className="w-4"></Image>
+        </motion.a>
+      </div>
+    </div>
+
+
+
+
+//about me
+
+<motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      id="about"
+      className="w-full px-[12%] py-10 scroll-mt-20"
+    >
+      <motion.h4
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className={`${ovo.className} text-center mb-2 text-lg`}
+      >
+        Introduction
+      </motion.h4>
+      <motion.h2
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        className={`${ovo.className} text-center text-5xl`}
+      >
+        About me
+      </motion.h2>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        className="flex w-full flex-col lg:flex-row items-center gap-20 my-20"
+      >
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          className="w-64 sm:w-80 rounded-3xl max-w-none"
+        >
+          <Image
+            src={assets.user_image}
+            alt=""
+            className="w-full rounded-3xl"
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="flex-1"
+        >
+          <p className={`${ovo.className} mb-10 max-w-2xl`}>
+            Hello there! Welcome to the universe. I am Prince Prajapati. I’m a dedicated and hardworking person who loves learning new things and improving myself every day. I love building, learning, and improving things that make a real impact.
+          </p>
+          <motion.ul
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 1 }}
+            className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl"
+          >
+            {infoList.map(({ icon, iconDark, title, description }, index) => (
+              <motion.li
+                whileHover={{ scale: 1.05 }}
+                key={index}
+                className={`border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-gray-100 hover:-translate-y-1 duration-500 hover:shadow-lg ${isDarkMode? 'border-white hover:bg-white/10 hover:shadow-theme' : ''}`}
+              >
+                <Image
+                  src={isDarkMode ? iconDark : icon}
+                  alt={title}
+                  className="w-7 mt-3"
+                />
+                <h3 className={`my-4 font-semibold text-gray-700 ${isDarkMode? 'text-white':''}`}>
+                  {title}
+                </h3>
+                <p className={`text-gray-600 text-sm ${isDarkMode? 'text-white/80':''}`}>
+                  {description}
+                </p>
+              </motion.li>
+            ))} 
+          </motion.ul>
+          <motion.h4
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 1.3, duration: 0.5 }}
+            className={`my-6 text-gray-700  ${isDarkMode? 'text-white/80' : ''} ${ovo.className}`}
+          >
+            Tools I use
+          </motion.h4>
+          <motion.ul
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 1.5, duration: 0.6 }}
+            className="flex items-centergap-3 sm:gap-5"
+          >
+            {toolsData.map((tool, index) => (
+              <motion.li
+                whileHover={{ scale: 1.05 }}
+                className="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500"
+                key={index}
+              >
+                <Image src={tool} alt="tool" className="w-5 sm:w-7" />
+              </motion.li>
+            ))}
+          </motion.ul>
+        </motion.div>
+      </motion.div>
+    </motion.div>
+
+//services
+
+<motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      id="services"
+      className="w-full px-[12%] py-10 scroll-mt-20"
+    >
+      <motion.h4
+        initial={{ y: -20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.3, duration: 0.5 }}
+        className={`${ovo.className} text-center mb-2 text-lg`}
+      >
+        What I offer
+      </motion.h4>
+      <motion.h2
+        initial={{ y: -20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.5, duration: 0.5 }}
+        className={`${ovo.className} text-center text-5xl`}
+      >
+        My Services
+      </motion.h2>
+
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.7, duration: 0.5 }}
+        className={`${ovo.className} text-center max-w-2xl mx-auto mt-5 mb-12`}
+      >
+        I am a Full Stack WebDevloper from Delhi, India. Fresher and Open to
+        work and get experience to improve my skills and improve way of living.
+      </motion.p>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.9, duration: 0.6 }}
+        className="grid grid-cols-auto gap-6 my-10 "
+      >
+        {serviceData.map(({ icon, title, description, link }, index) => (
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            key={index}
+            className={`border border-gray-400 rounded-lg px-8 py-12 hover:shadow-theme cursor-pointer  hover:-translate-y-1 duration-500 ${isDarkMode? 'hover:bg-[#2a004a]':'hover:bg-[#fcf4ff]'}`}
+          >
+            <Image src={icon} alt="" className="w-10" />
+            <h3 className={`text-lg my-4 text-gray-700 w-1 ${isDarkMode? 'text-white' : ''}`}>
+              {title}
+            </h3>
+            <p className={`text-sm text-gray-600 leading-5 wrap ${isDarkMode? 'text-white/80' : ''}`}>
+              {description}
+            </p>
+            <a href={link} className="flex items-center gap-2 text-sm mt-5">
+              Read more{" "}
+              <Image src={assets.right_arrow} alt="" className="w-4" />
+            </a>
+          </motion.div>
+        ))}
+      </motion.div>
+    </motion.div>
+
+
+//work 
+
+<motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      id="work"
+      className="w-full px-[12%] py-10 scroll-mt-20"
+    >
+      <motion.h4
+        initial={{ y: -20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.3, duration: 0.5 }}
+        className={`${ovo.className} text-center mb-2 text-lg`}
+      >
+        My portfolio
+      </motion.h4>
+      <motion.h2
+        initial={{ y: -20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.5, duration: 0.5 }}
+        className={`${ovo.className} text-center text-5xl`}
+      >
+        My latest work
+      </motion.h2>
+
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.7, duration: 0.5 }}
+        className={`${ovo.className} text-center max-w-2xl mx-auto mt-5 mb-12`}
+      >
+        Welcome to my web development portfolio! Explore a collection of
+        projects showcasing my expertise in Full Stack WebDevelopment.
+      </motion.p>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.9, duration: 0.6 }}
+        className="grid grid-cols-auto my-10 gap-5 text-black "
+      >
+        {workData.map((project, index) => (
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+            key={index}
+            className="aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group hover:shadow-theme"
+            style={{ backgroundImage: `url(${project.bgImage})` }}
+          >
+            <div className="bg-white w-12/14 overflow-hidden rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between dura group-hover:bottom-7">
+              <div>
+                <h2 className="font-semibold">{project.title}</h2>
+                <p className="text-sm text-gray-700">{project.description}</p>
+              </div>
+              <div className="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                
+                <a href={project.link} target="_blank"><Image src={assets.send_icon} alt="" className="w-5" /></a>
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </motion.div>
+      <motion.a
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 1.1, duration: 0.5 }}
+        href="https://github.com/psinvincible/" target="_blank"
+        className={`w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full y-3 px-10 mx-auto my-20  ${
+          isDarkMode
+            ? "text-theme border-white hover:bg-[#2a004a]"
+            : "hover:bg-[#fcf4ff]"
+        } duration-500 `}
+      >
+        Show more{" "}
+        <Image
+          src={
+            isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold
+          }
+          alt="Right arrow"
+          className="w-4"
+        />
+      </motion.a>
+    </motion.div>
+
+
+
+    
+
+    //workData
+
+    {
+        title: 'E-Commerce Full Stack',
+        description: 'NEXT JS {live}',
+        bgImage: '/e_commerce.png',
+        link: 'https://e-commerce-seven-delta-77.vercel.app/',
+    },
+    {
+        title: 'Full-Stack LMS',
+        description: 'MERN {live}',
+        bgImage: '/work-1.png',
+        link: 'https://lms-frontend-indol-theta.vercel.app/',
+    },
+    {
+        title: 'Fee Management SFCS',
+        description: 'EJS project {Live}',
+        bgImage: '/work-5.png',
+        link: 'https://student-fee-collection-system.vercel.app/',
+    },
+    {
+        title: 'WeatherApp',
+        description: 'Web app using react',
+        bgImage: '/work-2.png',
+        link: 'https://github.com/psinvincible/Weather_app_react',
+    },
+    {
+        title: 'Blog Web App',
+        description: 'Basic Functionality',
+        bgImage: '/work-4.png',
+        link: 'https://github.com/psinvincible/ps-blog'
+    },
+
+
+
+
+    
+
+      

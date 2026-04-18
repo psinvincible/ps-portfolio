@@ -10,6 +10,8 @@ import postman from './postman.png';
 import firebase from './firebase.png';
 import figma from './figma.png';
 import git from './git.png';
+import git_icon from './github_icon.png';
+import linkedin_icon from './linkedin_icon.png';
 import mongodb from './mongodb.png';
 import right_arrow_white from './right-arrow-white.png';
 import logo from './logo.png';
@@ -50,6 +52,8 @@ export const assets = {
     firebase,
     figma,
     git,
+    git_icon,
+    linkedin_icon,
     mongodb,
     right_arrow_white,
     logo,
@@ -80,35 +84,30 @@ export const assets = {
 
 export const workData = [
     {
-        title: 'E-Commerce Full Stack',
-        description: 'NEXT JS {live}',
-        bgImage: '/e_commerce.png',
-        link: 'https://e-commerce-seven-delta-77.vercel.app/',
+      title: 'E-Commerce Website',
+      description: 'Full stack e-commerce platform with authentication and payments',
+      image: '/e_commerce.png',
+      tech: ['React', 'Next.js', 'MongoDB'],
+      github: 'https://github.com/psinvincible/E-commerce',
+      live: 'https://e-commerce-seven-delta-77.vercel.app/',
     },
     {
-        title: 'Full-Stack LMS',
-        description: 'MERN {live}',
-        bgImage: '/work-1.png',
-        link: 'https://lms-frontend-indol-theta.vercel.app/',
+      title: 'Full-Stack LMS',
+      description: 'A Learners Management platform with o-auth and payment integration',
+      image: '/work-1.png',
+      tech: ['React', 'Next.js', 'MongoDB'],
+      github: 'https://github.com/psinvincible/LMS',
+      live: 'https://lms-frontend-indol-theta.vercel.app/',
     },
     {
-        title: 'Fee Management SFCS',
-        description: 'EJS project {Live}',
-        bgImage: '/work-5.png',
-        link: 'https://student-fee-collection-system.vercel.app/',
+      title: 'Fee Management SFCS',
+      description: 'Fee Management System made using Express, with MVC architecture and admin dashboard to manage teachers.',
+      image: '/work-5.png',
+      tech: ['Express.js', 'Node.js', 'MongoDB'],
+      github: 'https://github.com/psinvincible/StudentFeeCollectionSystem',
+      live: 'https://student-fee-collection-system.vercel.app/',
     },
-    {
-        title: 'WeatherApp',
-        description: 'Web app using react',
-        bgImage: '/work-2.png',
-        link: 'https://github.com/psinvincible/Weather_app_react',
-    },
-    {
-        title: 'Blog Web App',
-        description: 'Basic Functionality',
-        bgImage: '/work-4.png',
-        link: 'https://github.com/psinvincible/ps-blog'
-    },
+    
 ]
 
 export const serviceData = [
