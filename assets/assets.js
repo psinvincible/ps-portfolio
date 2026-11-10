@@ -133,7 +133,7 @@ export const timelineData = [
     year: "2026",
     title: "Project Deployment",
     description:
-      "Deployed full-stack applications on Vercel, implemented payment integration, and optimized performance for production.",
+      "Deployed full-stack applications on Vercel, implemented payment integration, and optimized performance for production. Joined Concentrix GGN for the post of 'Content-Moderator' for twitter(X) buzz process in June 2026 to October 2026.",
   },
   {
     year: "2025",

@@ -12,7 +12,6 @@ const detailedMe = () => {
         </h2>
 
         <div className="grid md:grid-cols-2 gap-10 items-start">
-          {/* left side */}
           <div className="space-y-6 ">
             <div className="p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 ">
               <User className="mb-3 bg-indigo-400" />
@@ -49,23 +48,21 @@ const detailedMe = () => {
             </div>
           </div>
 
-          {/* right side */}
             <div className="p-6 rounded-2xl bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-white/20 backdrop-blur-md">
             <h3 className="text-xl font-semibold mb-4">
               My Journey
             </h3>
 
             <p className="text-gray-400 leading-relaxed mb-4">
-              {/* Write your detailed story here (long paragraph) */}
-              Journey will be updated soon. Stay tuned...
+              My journey started since 2002, and after completion of my graduation in 2024, i have joined Concentrix GGN for the post of "Content-Moderator" and became part of twitter which is "X" now. There i have learned to review account and enfore the company policy and took action as per the voilation found.
             </p>
 
             <p className="text-gray-400 leading-relaxed mb-4">
-              {/* Continue your journey, projects, real-world systems */}
+              {/* here i will write my detailed journey, project, and many more*/}
             </p>
 
             <p className="text-gray-400 leading-relaxed">
-              {/* Your vision and goals */}
+              {/* here is a section for my vision and goals */}
             </p>
           </div>
 

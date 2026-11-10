@@ -92,7 +92,7 @@ const Header = ({ isDarkMode }) => {
         </button>
 
         <a
-          href="/prince-resume.pdf"
+          href="/prince_resume.pdf"
           target="_blank"
           className="px-6 py-3 border rounded-full hover:scale-105 transition"
         >
